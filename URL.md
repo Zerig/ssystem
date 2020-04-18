@@ -34,15 +34,15 @@ $GLOBALS["url"] =		new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUES
 
 $GLOBALS["url"]->getString()	=> "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
 
-public $scheme 	=> "http"
-public $host 	=> "www.web.cz"
-public $root 	=> "root"
-public $path 	=> "aaa/bbb/ccc.html"
-public $query 	=> "?member=me&age=15"
-public $fragment 	=> "hashtag"
+public $scheme 	 => "http"
+public $host 	 => "www.web.cz"
+public $root 	 => "root"
+public $path 	 => "aaa/bbb/ccc.html"
+public $query 	 => "?member=me&age=15"
+public $fragment => "hashtag"
 
 
-public $dir		=> "www/aaa/bbb"
-public $mysql	=> ""
-public $get		=> "ccc"
+public $dir	 => "www/aaa/bbb"
+public $mysql	 => ""
+public $get	 => "ccc"
 ```
