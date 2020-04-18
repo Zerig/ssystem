@@ -27,8 +27,8 @@ $http = ( isset($_SERVER["HTTPS"]) ? 'https://' : 'http://' );	// Just get which
 $GLOBALS["server_root"] = new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);		// set root folder as ROOT
 $GLOBALS["server_root"]->pop();	// remove "index.php" part
 
-$GLOBALS["server_url"] = new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
-$GLOBALS["url"] =	 new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
+$GLOBALS["server_url"] =  new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
+$GLOBALS["url"] =	  new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
 // -----------------------------
 ```
 ## FOR EXAMPLE we can have this:
