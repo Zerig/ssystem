@@ -20,8 +20,8 @@ http://www.web.cz/root/
  ├── .htaccess			← router .htaccess settings
  └── index.php			← main file which call everything
 ```
+## INITIAL CONFIG URL SETTINGS ↓
 ```php
-// INITIAL CONFIG URL SETTINGS ↓
 $http = ( isset($_SERVER["HTTPS"]) ? 'https://' : 'http://' );	// Just get which type the URL is
 
 $GLOBALS["server_root"] = new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);		// set root folder as ROOT
@@ -31,7 +31,7 @@ $GLOBALS["server_url"] =  new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVE
 $GLOBALS["url"] =	  new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
 // -----------------------------
 ```
-## FOR EXAMPLE we can have this:
+## FOR EXAMPLE we can have this ↓
 ```php
 $GLOBALS["url"]->getString() => "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
 
