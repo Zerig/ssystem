@@ -10,9 +10,9 @@ works with URL and set "split" PATH into 3 parts:
 
 ```code
 http://server.com/
- ├── _sys/				← system folder => settings
+ ├── _sys/			← system folder => settings
  │   └── config.php		← initial config runner
- ├── www/				← web app folder
+ ├── www/			← web app folder
  │   ├── aaa/			← example of folder
  │   │   ├── bbb/
  │   │   └── .php
