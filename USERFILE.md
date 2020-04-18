@@ -1,7 +1,7 @@
 # SSYTEM \ USER FILE
-- class File extends **\FileManager\File**
-- needs **\UrlParser\Url** class
-- needs **\FileManager\File** class
+- class File extends [**\FileManager\File**](https://github.com/Zerig/file-manager/blob/master/FILE.md)
+- needs [**\UrlParser\Url**](https://github.com/Zerig/url-parser) class
+- needs [**\FileManager\File**](https://github.com/Zerig/file-manager) class
 works with Files and give them user information
 
 
