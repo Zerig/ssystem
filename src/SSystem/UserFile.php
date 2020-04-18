@@ -46,7 +46,9 @@ class UserFile extends \FileManager\File{
 	}
 
 	public function getUsersCount(){
-		return count($this->users);
+		if(empty($this->users))		return 0;
+		if($this->users[0] == null)	return -1;
+		else						return count($this->users);
 	}
 
 }
