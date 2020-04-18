@@ -34,37 +34,40 @@ public $users		=> ["1", "2"]
 ```php
 // 2 types of users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@1@2.html");
-$ufiles->users =>	["1", "2"]
-$ufiles->name =>	"file@1@2.html"
-$ufiles->fakeName =>	"file.html"
+$ufile->users =>	["1", "2"]
+$ufile->name =>	"file@1@2.html"
+$ufile->fakeName =>	"file.html"
 
 // 2 types of users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@1.html");
-$ufiles->users => 	["1"]
-$ufiles->name => 	"file@1.html"
-$ufiles->fakeName =>	"file.html"
+$ufile->users => 	["1"]
+$ufile->name => 	"file@1.html"
+$ufile->fakeName =>	"file.html"
 
 // all login users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@.html");
-$ufiles->users => 	[""]
-$ufiles->name => 	"file@.html"
-$ufiles->fakeName =>	"file.html"
+$ufile->users => 	[""]
+$ufile->name => 	"file@.html"
+$ufile->fakeName =>	"file.html"
 
 // all non login has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file.html");
-$ufiles->users => 	null
-$ufiles->name => 	"file.html"
-$ufiles->fakeName =>	"file.html"
+$ufile->users => 	null
+$ufile->name => 	"file.html"
+$ufile->fakeName =>	"file.html"
 
 ```
 
-## [FILE MANAGER/FILES](https://github.com/Zerig/file-manager)
-- **exist(), isDir(), isFile()**
-- **rename($new_name)**
-- **move($new_dir)**
-* **copy($copy_name = null)**
-* **upload(File $local_file)**
-* **delete()**
+## INHERITED METHODS
+[FILE MANAGER/FF::](https://github.com/Zerig/folder-manager/blob/master/FF.md)
+- **exist(), isDir(), isFile()** Check if File/Folder really exist
+- **rename($new_name)** Change name of folder/folder
+- **move($new_dir)** Change dir, not name of folder/folder
+
+[FILE MANAGER/FILES::](https://github.com/Zerig/folder-manager/blob/master/FILE.md)
+* **copy($copy_name = null)** Copy File in the same folder
+* **upload(File $local_folder)** take uploaded, temporary, folder and upload it into new "empty" File
+* **delete()** Remove concrete File not object
 
 
 ## hasUser($user_type)
