@@ -34,26 +34,26 @@ public $users		=> ["1", "2"]
 ```php
 // 2 types of users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@1@2.html");
-$ufiles->users =>		["1", "2"]
-$ufiles->name =>		"file@1@2.html"
+$ufiles->users =>	["1", "2"]
+$ufiles->name =>	"file@1@2.html"
 $ufiles->fakeName =>	"file.html"
 
 // 2 types of users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@1.html");
-$ufiles->users => 	["1"]
-$ufiles->name => 	"file@1.html"
+$ufiles->users => ["1"]
+$ufiles->name => "file@1.html"
 $ufiles->fakeName => "file.html"
 
 // all login users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@.html");
-$ufiles->users => 	[""]
-$ufiles->name => 	"file@.html"
+$ufiles->users => [""]
+$ufiles->name => "file@.html"
 $ufiles->fakeName => "file.html"
 
 // all non login has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file.html");
-$ufiles->users => 	null
-$ufiles->name => 	"file.html"
+$ufiles->users => null
+$ufiles->name => "file.html"
 $ufiles->fakeName => "file.html"
 
 ```
