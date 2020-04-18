@@ -30,9 +30,10 @@ $GLOBALS["server_root"]->pop();	// remove "index.php" part
 $GLOBALS["server_url"] = new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
 $GLOBALS["url"] =		new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
 // -----------------------------
-
-
-$GLOBALS["url"]->getString()	=> "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
+```
+## FOR EXAMPLE we can have this:
+```php
+$GLOBALS["url"]->getString() => "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
 
 public $scheme 	 => "http"
 public $host 	 => "www.web.cz"
