@@ -58,6 +58,14 @@ $ufiles->fakeName =>	"file.html"
 
 ```
 
+## [FILE MANAGER/FILES](https://github.com/Zerig/file-manager)
+- **exist(), isDir(), isFile()**
+- **rename($new_name)**
+- **move($new_dir)**
+* **copy($copy_name = null)**
+* **upload(File $local_file)**
+* **delete()**
+
 
 ## hasUser($user_type)
 - $user_type [int]
