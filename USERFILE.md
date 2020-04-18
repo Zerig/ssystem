@@ -34,19 +34,19 @@ public $users		=> ["1", "2"]
 ```php
 // 2 types of users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@1@2.html");
-$ufiles->$users		=> ["1", "2"]
+$ufiles->$users => ["1", "2"]
 
 // 2 types of users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@1.html");
-$ufiles->$users		=> ["1"]
+$ufiles->$users => ["1"]
 
 // all login users has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file@.html");
-$ufiles->$users		=> [""]
+$ufiles->$users => [""]
 
 // all non login has access
 $ufile = new \SSystem\UserFile("aaa/bbb/file.html");
-$ufiles->$users		=> null
+$ufiles->$users => null
 
 ```
 
