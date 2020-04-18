@@ -31,6 +31,26 @@ public $users		=> ["1", "2"]
 ```
 
 
+```php
+// 2 types of users has access
+$ufile = new \SSystem\UserFile("aaa/bbb/file@1@2.html");
+$ufiles->$users		=> ["1", "2"]
+
+// 2 types of users has access
+$ufile = new \SSystem\UserFile("aaa/bbb/file@1.html");
+$ufiles->$users		=> ["1"]
+
+// all login users has access
+$ufile = new \SSystem\UserFile("aaa/bbb/file@.html");
+$ufiles->$users		=> [""]
+
+// all non login has access
+$ufile = new \SSystem\UserFile("aaa/bbb/file.html");
+$ufiles->$users		=> null
+
+```
+
+
 ## hasUser($user_type)
 - $user_type [int]
 - @return [boolean]
