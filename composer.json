@@ -16,7 +16,11 @@
         }
     ],
     "require": {
-        "php" : ">=5.6.0"
+        "php" : ">=5.6.0",
+        "zerig/file-manager" : "dev-master",
+        "zerig/url-parser" : "@dev",
+        "zerig/sql-manager" : "@dev",
+        "zerig/date" : "@dev"
     },
     "autoload": {
         "psr-4": {

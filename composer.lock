@@ -1,0 +1,196 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5e7955bdf3031009802a96d7a1906c88",
+    "packages": [
+        {
+            "name": "zerig/date",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zerig/date.git",
+                "reference": "77457472bd464e0877b54c642859cd1f0123a727"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zerig/date/zipball/77457472bd464e0877b54c642859cd1f0123a727",
+                "reference": "77457472bd464e0877b54c642859cd1f0123a727",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Date\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeronym Pelikovsky",
+                    "email": "pelikovsky@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Works with DateTime class. Use czech name of Months and Week Days and Format",
+            "keywords": [
+                "czech date",
+                "czech dateTime"
+            ],
+            "time": "2020-04-17T10:05:28+00:00"
+        },
+        {
+            "name": "zerig/file-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zerig/file-manager.git",
+                "reference": "9a9540e3b4bfc6d9a555a2469a6540bb17ef1163"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zerig/file-manager/zipball/9a9540e3b4bfc6d9a555a2469a6540bb17ef1163",
+                "reference": "9a9540e3b4bfc6d9a555a2469a6540bb17ef1163",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "zerig/file-manager": "@dev",
+                "zerig/url-parser": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FileManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeronym Pelikovsky",
+                    "email": "pelikovsky@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This NAMESPACE group specializes in File/Folder structures. It loads files and folders into class.",
+            "keywords": [
+                "file",
+                "file manager",
+                "folder"
+            ],
+            "time": "2020-04-17T09:37:14+00:00"
+        },
+        {
+            "name": "zerig/sql-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zerig/sql-manager.git",
+                "reference": "65ee2f75ddce42b70d715ec40a9b25e4b635ab41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zerig/sql-manager/zipball/65ee2f75ddce42b70d715ec40a9b25e4b635ab41",
+                "reference": "65ee2f75ddce42b70d715ec40a9b25e4b635ab41",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "zerig/sql-manager": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SqlManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeronym Pelikovsky",
+                    "email": "pelikovsky@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This class connets to DB and work with it.",
+            "keywords": [
+                "SQL manager",
+                "database",
+                "mysql"
+            ],
+            "time": "2020-04-17T08:29:06+00:00"
+        },
+        {
+            "name": "zerig/url-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zerig/url-parser.git",
+                "reference": "cc41fe38040cbd7d878f8730910c82a50487c5b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zerig/url-parser/zipball/cc41fe38040cbd7d878f8730910c82a50487c5b2",
+                "reference": "cc41fe38040cbd7d878f8730910c82a50487c5b2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "zerig/url-parser": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UrlParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeronym Pelikovsky",
+                    "email": "pelikovsky@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "class of object which parse url and can work with it.",
+            "keywords": [
+                "url",
+                "url parser"
+            ],
+            "time": "2020-04-17T11:09:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "zerig/file-manager": 20,
+        "zerig/url-parser": 20,
+        "zerig/sql-manager": 20,
+        "zerig/date": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}
