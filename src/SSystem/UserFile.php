@@ -35,6 +35,7 @@ class UserFile extends \FileManager\File{
 
 
 	public function hasUser($user_type){
+		$result = true;
 		if(!empty($this->users) && $this->users[0] == "") return true;
 		$user_type = (is_array($user_type))? $user_type : [$user_type];
 
