@@ -9,7 +9,7 @@ works with URL and set "split" PATH into 3 parts:
 - **GET** Part in *URL PATH* which is used like GET
 
 ```code
-http://server.com/
+http://www.web.cz/root/
  ├── _sys/			← system folder => settings
  │   └── config.php		← initial config runner
  ├── www/			← web app folder
@@ -21,8 +21,28 @@ http://server.com/
  └── index.php			← main file which call everything
 ```
 ```php
-public $dir		
-public $mysql
-public $get		//
+// INITIAL CONFIG URL SETTINGS ↓
+$http = ( isset($_SERVER["HTTPS"]) ? 'https://' : 'http://' );	// Just get which type the URL is
 
+$GLOBALS["server_root"] = new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);		// set root folder as ROOT
+$GLOBALS["server_root"]->pop();	// remove "index.php" part
+
+$GLOBALS["server_url"] = new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
+$GLOBALS["url"] =		 new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
+// -----------------------------
+
+
+$GLOBALS["url"]->getString()	=> "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
+
+public $scheme 	=> "http"
+public $host 	=> "www.web.cz"
+public $root 	=> "root"
+public $path 	=> "aaa/bbb/ccc.html"
+public $query 	=> "?member=me&age=15"
+public $fragment 	=> "hashtag"
+
+
+public $dir		=> "www/aaa/bbb"
+public $mysql	=> ""
+public $get		=> "ccc"
 ```
