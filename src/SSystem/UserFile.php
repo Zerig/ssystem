@@ -32,9 +32,17 @@ class UserFile extends \FileManager\File{
 	}
 
 
-	public function hasUser($user){
+
+
+	public function hasUser($user_type){
 		if(!empty($this->users) && $this->users[0] == "") return true;
-		return in_array($user, $this->users);
+		$user_type = (is_array($user_type))? $user_type : [$user_type];
+
+		foreach($user_type as $ut){
+			$result &= in_array($ut, $this->users);
+		}
+
+		return $result;
 	}
 
 	public function getUsersCount(){
