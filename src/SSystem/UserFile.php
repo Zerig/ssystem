@@ -40,7 +40,7 @@ class UserFile extends \FileManager\File{
 		$user_type = (is_array($user_type))? $user_type : [$user_type];
 
 		foreach($user_type as $ut){
-			$result &= in_array($ut, $this->users);
+			$result = $result && in_array($ut, $this->users);
 		}
 
 		return $result;

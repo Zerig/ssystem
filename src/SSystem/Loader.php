@@ -171,37 +171,7 @@ class Loader{
 	}
 
 
-	public function setPage22(){
-		$len = [];
 
-		$len["php"] = 		max( intval(count($this->_php->url->getPath("array"))) , intval(count($this->php->url->getPath("array"))) );
-		$len["index"] = 	max( intval(count($this->_index->url->getPath("array"))) , intval(count($this->index->url->getPath("array"))) );
-
-		if($len["php"] > $len["index"]){
-			$this->_page = $this->_php;
-			$this->page = $this->php;
-
-		}else if($len["php"] < $len["index"]){
-			$this->_page = $this->_index;
-			$this->page = $this->index;
-
-		}else{
-			// if URL PATH has no GET part - only real existing part
-			if($this->url->getString() == $this->real_url->getString()){
-				$this->_page = $this->_index;
-				$this->page = $this->index;
-
-			}else{
-				$this->_page = $this->_php;
-				$this->page = $this->php;
-			}
-		}
-
-
-
-
-
-	}
 
 
 

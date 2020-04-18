@@ -42,9 +42,22 @@ class UserFolder extends \FileManager\Folder{
 	}
 
 
-	public function hasUser($user){
+	public function hasUser($user_type){
+		$result = true;
 		if(!empty($this->users) && $this->users[0] == "") return true;
-		return in_array($user, $this->users);
+		$user_type = (is_array($user_type))? $user_type : [$user_type];
+
+		foreach($user_type as $ut){
+			$result = $result && in_array($ut, $this->users);
+		}
+
+		return $result;
+	}
+
+	public function getUsersCount(){
+		if(empty($this->users))		return 0;
+		if($this->users[0] == null)	return -1;
+		else						return count($this->users);
 	}
 
 }

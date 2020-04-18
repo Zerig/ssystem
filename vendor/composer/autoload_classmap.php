@@ -11,6 +11,7 @@ return array(
     'FileManager\\File' => $vendorDir . '/zerig/file-manager/src/FileManager/File.php',
     'FileManager\\Folder' => $vendorDir . '/zerig/file-manager/src/FileManager/Folder.php',
     'SSystem\\Loader' => $baseDir . '/src/SSystem/Loader.php',
+    'SSystem\\Url' => $baseDir . '/src/SSystem/Url.php',
     'SSystem\\UserFile' => $baseDir . '/src/SSystem/UserFile.php',
     'SSystem\\UserFolder' => $baseDir . '/src/SSystem/UserFolder.php',
     'SqlManager\\Mysql' => $vendorDir . '/zerig/sql-manager/src/SqlManager/Mysql.php',

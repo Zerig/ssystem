@@ -55,6 +55,7 @@ class ComposerStaticInit4bedaf208ecbda8ef216c7d5672e909f
         'FileManager\\File' => __DIR__ . '/..' . '/zerig/file-manager/src/FileManager/File.php',
         'FileManager\\Folder' => __DIR__ . '/..' . '/zerig/file-manager/src/FileManager/Folder.php',
         'SSystem\\Loader' => __DIR__ . '/../..' . '/src/SSystem/Loader.php',
+        'SSystem\\Url' => __DIR__ . '/../..' . '/src/SSystem/Url.php',
         'SSystem\\UserFile' => __DIR__ . '/../..' . '/src/SSystem/UserFile.php',
         'SSystem\\UserFolder' => __DIR__ . '/../..' . '/src/SSystem/UserFolder.php',
         'SqlManager\\Mysql' => __DIR__ . '/..' . '/zerig/sql-manager/src/SqlManager/Mysql.php',
