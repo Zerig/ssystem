@@ -59,12 +59,12 @@ public $get	 => "ccc"
 ## get....($exp)
 
 $exp [string]	In which form do we want export<br>
-1. getDir() - how is variable saved [string | array of string | key array]
-2. getDir("string") - how could be written in URL
-3. getDir("array") - in array [array of string | key array]
+1. **getDir()** - how is variable saved [string | array of string | key array]
+2. **getDir("string")** - how could be written in URL
+3. **getDir("array")** - in array [array of string | key array]
 
 ```php
-"http://web.cz/aaa/bbb/c.html"
+$GLOBALS["url"]->getString() => "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
 ```
 * **getDir()** - get real DIR for loading page *PHP* files
 * **getMysql()** - get MySQL data: ""
@@ -81,6 +81,6 @@ $exp [string]	In which form do we want export<br>
 $GLOBALS["url"] = new \UrlParser\Url("http://www.web.cz/root/aaa/bbb/a.html");
 $GLOBALS["url"]->getString() => "http://www.web.cz/root/aaa/bbb/a.html"
 
-$GLOBALS["url"]->getPath() => "ccc/bbb/a.html"
+$GLOBALS["url"]->getPath("string") => "ccc/bbb/a.html"
 
 ```
