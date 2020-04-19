@@ -4,7 +4,7 @@ namespace SSystem;
 
 class UserFolder extends \FileManager\Folder{
 	public $fakeUrl;
-	public $fakename;
+	public $fakeName;
 	public $users;
 
 	public function __construct($url){
@@ -16,7 +16,7 @@ class UserFolder extends \FileManager\Folder{
 
 	public function setUser(){
 		$array_name = explode("@", $this->name);
-		$this->fakename = $array_name[0];	// set fakename
+		$this->fakeName = $array_name[0];	// set fakeName
 
 		// remove first part => name and the rest is array of user numbers
 		array_shift($array_name);
@@ -26,7 +26,7 @@ class UserFolder extends \FileManager\Folder{
 
 	public function setFakeUrl(){
 		$this->fakeUrl = clone $this->dir;
-		$this->fakeUrl->addPath($this->fakename);
+		$this->fakeUrl->addPath($this->fakeName);
 	}
 
 	public function scan(){

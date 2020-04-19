@@ -2,6 +2,7 @@
 - class File extends [**\UrlParser\Url**](https://github.com/Zerig/url-parser)
 - needs [**\UrlParser\Url**](https://github.com/Zerig/url-parser) class
 - needs [**\FileManager\File**](https://github.com/Zerig/file-manager) class
+- needs **$GLOBALS["user"]**
 
 works with URL and set "split" PATH into 3 parts:
 - **DIR** Real dir folder which takes PHP files
@@ -31,6 +32,10 @@ $GLOBALS["server_url"] =  new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVE
 $GLOBALS["url"] =	  new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
 // -----------------------------
 ```
+
+
+
+
 ## FOR EXAMPLE we can have this ↓
 ```php
 $GLOBALS["url"]->getString() => "http://www.web.cz/root/aaa/bbb/ccc.html?member=me&age=15#hashtag"
@@ -46,4 +51,36 @@ public $fragment => "hashtag"
 public $dir	 => "www/aaa/bbb"
 public $mysql	 => ""
 public $get	 => "ccc"
+```
+
+
+
+
+## get....($exp)
+
+$exp [string]	In which form do we want export<br>
+1. getDir() - how is variable saved [string | array of string | key array]
+2. getDir("string") - how could be written in URL
+3. getDir("array") - in array [array of string | key array]
+
+```php
+"http://web.cz/aaa/bbb/c.html"
+```
+* **getDir()** - get real DIR for loading page *PHP* files
+* **getMysql()** - get MySQL data: ""
+* **getGet()** - get GET part for page files: ["ccc"]
+
+- **getScheme()** - get scheme part: "http"
+- **getHost()** - get Host part: "www.web.cz"
+- **getRoot()** - get Root part: ["root"]
+- **getPath()** - get Path part: ["root", "aaa", "bbb", "ccc.html"]
+- **getQuery()** - get Query part: ["member" => "me", "age" => "15"]
+- **getFragment()** - get hastag part: "hashtag"
+
+```php
+$GLOBALS["url"] = new \UrlParser\Url("http://www.web.cz/root/aaa/bbb/a.html");
+$GLOBALS["url"]->getString() => "http://www.web.cz/root/aaa/bbb/a.html"
+
+$GLOBALS["url"]->getPath() => "ccc/bbb/a.html"
+
 ```

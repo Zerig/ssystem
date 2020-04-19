@@ -13,6 +13,15 @@ $GLOBALS["mysql"] = new \SqlManager\Mysql([
 	"db_name"	=> "_ssystem"
 ]);
 
+// USER
+$GLOBALS["user"] = $GLOBALS["mysql"]->query_("
+	SELECT *
+	FROM user
+	WHERE id = 1
+");
+
+
+
 
 // URL
 $http = ( isset($_SERVER["HTTPS"]) ? 'https://' : 'http://' );
@@ -21,3 +30,4 @@ $GLOBALS["server_root"]->pop();
 $GLOBALS["server_url"] = 	new \UrlParser\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
 
 $GLOBALS["url"] = 			new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);
+//$GLOBALS["page_url"] = 		new \SSystem\Url($http.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], clone $GLOBALS["server_url"]);

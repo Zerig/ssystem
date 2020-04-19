@@ -3,11 +3,12 @@ namespace SSystem;
 
 
 class Loader{
-	public $dirUrl;
+	public $url;
+	public $real_url;
 
 	public $user_type = 1;
 
-	public $_main = [];
+	public $_main;
 	public $_php;
 	public $php;
 	public $_index;
@@ -17,14 +18,7 @@ class Loader{
 	public $page;
 
 
-
-	public function setMain(){
-		$dirUrl = clone $this->dirUrl;
-		
-	}
-
-
-	/*public function __construct($server_url){
+	public function __construct($server_url){
 		$server_url->pop();
 		$server_url->addPath("www");
 		$server_url->addPath($GLOBALS["url"]->getPath());
@@ -66,6 +60,9 @@ class Loader{
 				if(!empty($ff->users) && !$ff->hasUser($this->user_type))	continue;	// when there is USER skip userFiles which is not for HIM
 				if($this->user_type == null && $ff->getUsersCount() > 0)	continue;	// when there is NO USER skip userFiles
 
+				/*echo $ff->url->getString();
+				if($ff->fakeName == "_.php") echo " JOS";
+				echo "<br>";*/
 
 				if( !empty($_php) 	&& end($_php)->url->getDepth() < $ff->url->getDepth() )		$_php = [];
 				if( !empty($php) 	&& end($php)->url->getDepth() < $ff->url->getDepth() )		$php = [];
@@ -106,7 +103,14 @@ class Loader{
 		echo $this->_php->url->getString();
 		self::setPage();
 
-	}*/
+
+		/*if($GLOBALS["url"]->hasFile())	$ff = new \FileManager\Folder($server_url);
+		else    						$ff = new \FileManager\Folder($server_url);
+
+		echo "EXIST: ".$ff->exist()."<br>";
+
+		echo print_r($ff);*/
+	}
 
 
 	public function findBestUserFile($array_ufile){

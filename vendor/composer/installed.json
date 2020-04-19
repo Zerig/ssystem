@@ -49,12 +49,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Zerig/file-manager.git",
-            "reference": "9a9540e3b4bfc6d9a555a2469a6540bb17ef1163"
+            "reference": "a83546fa88e425c1652ea84ffb1e000d4990a485"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Zerig/file-manager/zipball/9a9540e3b4bfc6d9a555a2469a6540bb17ef1163",
-            "reference": "9a9540e3b4bfc6d9a555a2469a6540bb17ef1163",
+            "url": "https://api.github.com/repos/Zerig/file-manager/zipball/a83546fa88e425c1652ea84ffb1e000d4990a485",
+            "reference": "a83546fa88e425c1652ea84ffb1e000d4990a485",
             "shasum": ""
         },
         "require": {
@@ -62,7 +62,7 @@
             "zerig/file-manager": "@dev",
             "zerig/url-parser": "@dev"
         },
-        "time": "2020-04-17T09:37:14+00:00",
+        "time": "2020-04-18T18:07:49+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
