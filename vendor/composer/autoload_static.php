@@ -19,10 +19,15 @@ class ComposerStaticInit4bedaf208ecbda8ef216c7d5672e909f
         'F' => 
         array (
             'FileManager\\' => 12,
+            'FCE\\' => 4,
         ),
         'D' => 
         array (
             'Date\\' => 5,
+        ),
+        'C' => 
+        array (
+            'Console\\' => 8,
         ),
     );
 
@@ -43,23 +48,37 @@ class ComposerStaticInit4bedaf208ecbda8ef216c7d5672e909f
         array (
             0 => __DIR__ . '/..' . '/zerig/file-manager/src',
         ),
+        'FCE\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerig/sql-manager/src',
+        ),
         'Date\\' => 
         array (
             0 => __DIR__ . '/..' . '/zerig/date/src',
         ),
+        'Console\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zerig/console/src',
+        ),
     );
 
     public static $classMap = array (
+        'Console\\Log' => __DIR__ . '/..' . '/zerig/console/src/Console/Log.php',
+        'Console\\LogData' => __DIR__ . '/..' . '/zerig/console/src/Console/LogData.php',
         'Date\\DateTime' => __DIR__ . '/..' . '/zerig/date/src/Date/DateTime.php',
+        'FCE\\Date' => __DIR__ . '/..' . '/zerig/sql-manager/src/FCE/Date.php',
+        'FCE\\Str' => __DIR__ . '/..' . '/zerig/sql-manager/src/FCE/Str.php',
         'FileManager\\FF' => __DIR__ . '/..' . '/zerig/file-manager/src/FileManager/FF.php',
+        'FileManager\\FM' => __DIR__ . '/..' . '/zerig/file-manager/src/FileManager/FM.php',
         'FileManager\\File' => __DIR__ . '/..' . '/zerig/file-manager/src/FileManager/File.php',
         'FileManager\\Folder' => __DIR__ . '/..' . '/zerig/file-manager/src/FileManager/Folder.php',
         'SSystem\\Loader' => __DIR__ . '/../..' . '/src/SSystem/Loader.php',
         'SSystem\\Url' => __DIR__ . '/../..' . '/src/SSystem/Url.php',
+        'SSystem\\User' => __DIR__ . '/../..' . '/src/SSystem/User.php',
         'SSystem\\UserFile' => __DIR__ . '/../..' . '/src/SSystem/UserFile.php',
         'SSystem\\UserFolder' => __DIR__ . '/../..' . '/src/SSystem/UserFolder.php',
+        'SqlManager\\MR' => __DIR__ . '/..' . '/zerig/sql-manager/src/SqlManager/MR.php',
         'SqlManager\\Mysql' => __DIR__ . '/..' . '/zerig/sql-manager/src/SqlManager/Mysql.php',
-        'SqlManager\\RS' => __DIR__ . '/..' . '/zerig/sql-manager/src/SqlManager/RS.php',
         'UrlParser\\Url' => __DIR__ . '/..' . '/zerig/url-parser/src/UrlParser/url.php',
     );
 

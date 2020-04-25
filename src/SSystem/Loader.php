@@ -19,8 +19,9 @@ class Loader{
 
 
 	public function setMain(){
-		$dirUrl = clone $this->dirUrl;
-		
+		$dirUrl = 	clone $this->dirUrl;
+		$scanUrl = 	
+
 	}
 
 

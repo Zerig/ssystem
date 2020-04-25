@@ -1,5 +1,48 @@
 [
     {
+        "name": "zerig/console",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Zerig/console.git",
+            "reference": "049b915ce8098a0772469bd5079eedf9a1c31a7a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Zerig/console/zipball/049b915ce8098a0772469bd5079eedf9a1c31a7a",
+            "reference": "049b915ce8098a0772469bd5079eedf9a1c31a7a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6.0"
+        },
+        "time": "2020-04-25T14:29:01+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Console\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeronym Pelikovsky",
+                "email": "pelikovsky@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Works with data which could be helpful during creating system.",
+        "keywords": [
+            "console",
+            "log"
+        ]
+    },
+    {
         "name": "zerig/date",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -49,20 +92,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Zerig/file-manager.git",
-            "reference": "a83546fa88e425c1652ea84ffb1e000d4990a485"
+            "reference": "7a097f7a0fb331f7d6bfed02377bf2cadbc6104c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Zerig/file-manager/zipball/a83546fa88e425c1652ea84ffb1e000d4990a485",
-            "reference": "a83546fa88e425c1652ea84ffb1e000d4990a485",
+            "url": "https://api.github.com/repos/Zerig/file-manager/zipball/7a097f7a0fb331f7d6bfed02377bf2cadbc6104c",
+            "reference": "7a097f7a0fb331f7d6bfed02377bf2cadbc6104c",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6.0",
-            "zerig/file-manager": "@dev",
             "zerig/url-parser": "@dev"
         },
-        "time": "2020-04-18T18:07:49+00:00",
+        "time": "2020-04-23T06:41:09+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -95,24 +137,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Zerig/sql-manager.git",
-            "reference": "65ee2f75ddce42b70d715ec40a9b25e4b635ab41"
+            "reference": "6340b7b2ac369afc29a03e74183f46f7fc9b7796"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Zerig/sql-manager/zipball/65ee2f75ddce42b70d715ec40a9b25e4b635ab41",
-            "reference": "65ee2f75ddce42b70d715ec40a9b25e4b635ab41",
+            "url": "https://api.github.com/repos/Zerig/sql-manager/zipball/6340b7b2ac369afc29a03e74183f46f7fc9b7796",
+            "reference": "6340b7b2ac369afc29a03e74183f46f7fc9b7796",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6.0",
-            "zerig/sql-manager": "@dev"
+            "zerig/console": "@dev",
+            "zerig/date": "@dev"
         },
-        "time": "2020-04-17T08:29:06+00:00",
+        "time": "2020-04-25T18:12:01+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
             "psr-4": {
-                "SqlManager\\": "src/"
+                "SqlManager\\": "src/",
+                "FCE\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -140,19 +184,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Zerig/url-parser.git",
-            "reference": "cc41fe38040cbd7d878f8730910c82a50487c5b2"
+            "reference": "dcff73c6320abac5baaf45c1384aef4a39b32b26"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Zerig/url-parser/zipball/cc41fe38040cbd7d878f8730910c82a50487c5b2",
-            "reference": "cc41fe38040cbd7d878f8730910c82a50487c5b2",
+            "url": "https://api.github.com/repos/Zerig/url-parser/zipball/dcff73c6320abac5baaf45c1384aef4a39b32b26",
+            "reference": "dcff73c6320abac5baaf45c1384aef4a39b32b26",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.6.0",
-            "zerig/url-parser": "@dev"
+            "php": ">=5.6.0"
         },
-        "time": "2020-04-17T11:09:05+00:00",
+        "time": "2020-04-23T08:28:19+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {

@@ -104,7 +104,7 @@ class Loader{
 		self::setPage();
 
 
-		/*if($GLOBALS["url"]->hasFile())	$ff = new \FileManager\Folder($server_url);
+		/*if($GLOBALS["url"]->hasExtension())	$ff = new \FileManager\Folder($server_url);
 		else    						$ff = new \FileManager\Folder($server_url);
 
 		echo "EXIST: ".$ff->exist()."<br>";

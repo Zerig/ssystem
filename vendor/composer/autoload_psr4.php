@@ -10,5 +10,7 @@ return array(
     'SqlManager\\' => array($vendorDir . '/zerig/sql-manager/src'),
     'SSystem\\' => array($baseDir . '/src'),
     'FileManager\\' => array($vendorDir . '/zerig/file-manager/src'),
+    'FCE\\' => array($vendorDir . '/zerig/sql-manager/src'),
     'Date\\' => array($vendorDir . '/zerig/date/src'),
+    'Console\\' => array($vendorDir . '/zerig/console/src'),
 );
