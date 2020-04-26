@@ -80,7 +80,7 @@ $GLOBALS["user"]->isLogged() => 0
 ```
 
 
-## signup($login, $password, $type)
+## ::signup($login, $password, $type)
 - **$login [string]** user name for login
 - **$password [string]** user password for login
 - **$type [num]** user_type_id
@@ -94,4 +94,41 @@ Add new user into MYSQL. New password length have to be min. 6 chars.
 \SSystem\User::signup("nym", "123456", 1)   => 1
 $GLOBALS["user"]->login("nym", "123456")    => 1
 $GLOBALS["user"]->isLogged() => 1
+```
+
+<hr>
+
+## ::existUser($login)
+- **$login [string]** user name
+* **@return [boolean]** success of action
+
+Add new user into MYSQL. New password length have to be min. 6 chars.
+```php
+\SSystem\User::existUser("not_exist") => 0
+\SSystem\User::existUser("nym")       => 1
+```
+
+## changePassword($old_password, $new_password, $control_password = null)
+- **$old_password [string]** origin user password
+- **$new_password [string]** new password
+- **$constrol_password [string]** controling of the new password - not necessary
+* **@return [boolean]** success of action
+
+change password to new password
+```php
+$GLOBALS["user"]->changePassword("123456", "666")              => 0	// new password is too short
+$GLOBALS["user"]->changePassword("123456", "666666")           => 1
+$GLOBALS["user"]->changePassword("666666", "123", "123")       => 0	// new password and confirmation is too short
+$GLOBALS["user"]->changePassword("666666", "123456", "123333") => 0	// new password and comfirmation is not the same
+```
+
+## changeLogin($new_login, $password)
+- **$new_login [string]** new login name
+- **$password [string]** origin user passworf for comfirmation
+* **@return [boolean]** success of action
+
+change password to new password
+```php
+$GLOBALS["user"]->changeLogin("nym2", "111111") => 0	// wrong password
+$GLOBALS["user"]->changeLogin("nym2", "666666") => 1	// right password
 ```
