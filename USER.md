@@ -108,6 +108,8 @@ Add new user into MYSQL. New password length have to be min. 6 chars.
 \SSystem\User::existUser("nym")       => 1
 ```
 
+<hr>
+
 ## changePassword($old_password, $new_password, $control_password = null)
 - **$old_password [string]** origin user password
 - **$new_password [string]** new password
@@ -131,4 +133,17 @@ change password to new password
 ```php
 $GLOBALS["user"]->changeLogin("nym2", "111111") => 0	// wrong password
 $GLOBALS["user"]->changeLogin("nym2", "666666") => 1	// right password
+```
+
+
+<hr>
+
+## ::removeUser($login)
+- **$login [string]** user name login to be deleted
+* **@return [boolean]** success of action
+
+Delete user from Mysql.
+```php
+\SSystem\User::removeUser("not_exist") => 1	// not existing user
+\SSystem\User::removeUser("nym")       => 1	// existing user
 ```
