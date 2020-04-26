@@ -58,16 +58,15 @@ public static $pass_len => 6;	// MIN length of passwords
 
 ## login($login, $password)
 - **$login [string]** user name for login
-- **$paddword [string]** user password for login
+- **$password [string]** user password for login
 * **@return [boolean]** success of action
 
 Log user into system.
-
 ```php
 $GLOBALS["user"]->login("not_exist", "123456") => 0
 $GLOBALS["user"]->isLogged() => 0
 
-$GLOBALS["user"]->login("zerig", "123456")	   => 1
+$GLOBALS["user"]->login("zerig", "123456")     => 1
 $GLOBALS["user"]->isLogged() => 1
 ```
 
@@ -75,8 +74,21 @@ $GLOBALS["user"]->isLogged() => 1
 * **@return [boolean]** success of action
 
 Log user out of system.
-
 ```php
 $GLOBALS["user"]->logout()   => 1
 $GLOBALS["user"]->isLogged() => 0
+```
+
+
+## signup($login, $password, $type)
+- **$login [string]** user name for login
+- **$password [string]** user password for login
+- **$type [num]** user_type_id
+* **@return [boolean]** success of action
+
+Add new user into MYSQL.
+```php
+\SSystem\User::signup("nym", "123456", 1) => 1
+$GLOBALS["user"]->login("nym", "123456")  => 1
+$GLOBALS["user"]->isLogged() => 1
 ```
