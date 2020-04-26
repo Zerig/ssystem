@@ -86,9 +86,12 @@ $GLOBALS["user"]->isLogged() => 0
 - **$type [num]** user_type_id
 * **@return [boolean]** success of action
 
-Add new user into MYSQL.
+Add new user into MYSQL. New password length have to be min. 6 chars.
 ```php
-\SSystem\User::signup("nym", "123456", 1) => 1
-$GLOBALS["user"]->login("nym", "123456")  => 1
+\SSystem\User::signup("zerig", "555555", 1) => 0	// user already exist
+\SSystem\User::signup("nym", "123", 1)      => 0	// password doesn't have 6 chars
+
+\SSystem\User::signup("nym", "123456", 1)   => 1
+$GLOBALS["user"]->login("nym", "123456")    => 1
 $GLOBALS["user"]->isLogged() => 1
 ```
