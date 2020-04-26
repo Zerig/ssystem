@@ -52,6 +52,9 @@ public $login           => "zerig"
 public static $pass_len => 6;	// MIN length of passwords
 
 ```
+<br>
+<hr>
+<br>
 
 ## login($login, $password)
 - **$login [string]** user name for login
