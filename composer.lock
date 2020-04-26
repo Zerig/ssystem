@@ -223,12 +223,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zerig/user-manager.git",
-                "reference": "61d6d9e06624d0c21e9d48491fb83842c647887f"
+                "reference": "6f1257fd44b619d546879cf5cba35ed8355065b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zerig/user-manager/zipball/61d6d9e06624d0c21e9d48491fb83842c647887f",
-                "reference": "61d6d9e06624d0c21e9d48491fb83842c647887f",
+                "url": "https://api.github.com/repos/Zerig/user-manager/zipball/6f1257fd44b619d546879cf5cba35ed8355065b8",
+                "reference": "6f1257fd44b619d546879cf5cba35ed8355065b8",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "user",
                 "user manager"
             ],
-            "time": "2020-04-26T18:54:57+00:00"
+            "time": "2020-04-26T20:57:25+00:00"
         }
     ],
     "packages-dev": [],
