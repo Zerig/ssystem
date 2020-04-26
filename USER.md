@@ -2,6 +2,8 @@
 - needs [**\SqlManager\Mysql**](https://github.com/Zerig/sql-manager) class
 works with User account
 
+
+## FIRST YOU NEED
 ```php
 $GLOBALS["mysql"] = new \SqlManager\Mysql([
 	"server_name"	=> "localhost",
@@ -22,6 +24,9 @@ $GLOBALS["mysql"]->multi_query("
 	  CONSTRAINT `user_ibfk_2` FOREIGN KEY (`user_type_id`) REFERENCES `user_type` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
+	INSERT INTO `user` (`id`, `user_type_id`, `login`, `password`) VALUES
+	(1,	1,	'zerig',	'$2y$15$"."u55Iz2kebEpW01bMLYYcReBGy5ZHoFvmRQyeaerGp0f8GnMLrbJEq');
+
 	CREATE TABLE `user_type` (
 	  `id` smallint(2) NOT NULL AUTO_INCREMENT,
 	  `name` varchar(150) COLLATE utf8_czech_ci NOT NULL,
@@ -34,17 +39,41 @@ $GLOBALS["mysql"]->multi_query("
 	(1,	'admin');
 ");
 ```
+
 ```php
 $GLOBALS["user"] = new \SSystem\User();
 $GLOBALS["user"]->login("zerig", "123456");
 
-public $id             =>
-public $user_type_id   =>
-public $user_type_name =>
-public $login          =>
+public $id              => 1
+public $user_type_id    => 1
+public $user_type_name  => "admin"
+public $login           => "zerig"
 
-public static $pass_len = 6;
+public static $pass_len => 6;	// MIN length of passwords
 
+```
 
+## login($login, $password)
+- **$login [string]** user name for login
+- **$paddword [string]** user password for login
+* **@return [boolean]** success of action
 
+Log user into system.
+
+```php
+$GLOBALS["user"]->login("not_exist", "123456") => 0
+$GLOBALS["user"]->isLogged() => 0
+
+$GLOBALS["user"]->login("zerig", "123456")	   => 1
+$GLOBALS["user"]->isLogged() => 1
+```
+
+## logout()
+* **@return [boolean]** success of action
+
+Log user out of system.
+
+```php
+$GLOBALS["user"]->logout()   => 1
+$GLOBALS["user"]->isLogged() => 0
 ```
