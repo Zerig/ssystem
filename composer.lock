@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e7955bdf3031009802a96d7a1906c88",
+    "content-hash": "5aeff3f5d352b563f759e582729eea63",
     "packages": [
         {
             "name": "zerig/console",
@@ -137,12 +137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zerig/sql-manager.git",
-                "reference": "3597e2c9e246d94eac73c9126dabb01e2acbca5c"
+                "reference": "52a4708a94628d0109de1711d4eaf1b064c69447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zerig/sql-manager/zipball/3597e2c9e246d94eac73c9126dabb01e2acbca5c",
-                "reference": "3597e2c9e246d94eac73c9126dabb01e2acbca5c",
+                "url": "https://api.github.com/repos/Zerig/sql-manager/zipball/52a4708a94628d0109de1711d4eaf1b064c69447",
+                "reference": "52a4708a94628d0109de1711d4eaf1b064c69447",
                 "shasum": ""
             },
             "require": {
@@ -174,7 +174,7 @@
                 "database",
                 "mysql"
             ],
-            "time": "2020-04-25T22:06:20+00:00"
+            "time": "2020-04-25T22:19:42+00:00"
         },
         {
             "name": "zerig/url-parser",
@@ -216,6 +216,48 @@
                 "url parser"
             ],
             "time": "2020-04-23T08:28:19+00:00"
+        },
+        {
+            "name": "zerig/user-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zerig/user-manager.git",
+                "reference": "61d6d9e06624d0c21e9d48491fb83842c647887f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zerig/user-manager/zipball/61d6d9e06624d0c21e9d48491fb83842c647887f",
+                "reference": "61d6d9e06624d0c21e9d48491fb83842c647887f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "zerig/sql-manager": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UserManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeronym Pelikovsky",
+                    "email": "pelikovsky@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage User class",
+            "keywords": [
+                "user",
+                "user manager"
+            ],
+            "time": "2020-04-26T18:54:57+00:00"
         }
     ],
     "packages-dev": [],
@@ -225,6 +267,7 @@
         "zerig/file-manager": 20,
         "zerig/url-parser": 20,
         "zerig/sql-manager": 20,
+        "zerig/user-manager": 20,
         "zerig/date": 20
     },
     "prefer-stable": false,
